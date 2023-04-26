@@ -1,0 +1,42 @@
+diamond
+rows=4
+
+for (( i=1; i<=rows; i++ ))
+do
+  spaces=$(( rows - i ))
+  asterisks=$(( i * 2 - 1 ))
+
+  for (( j=1; j<=spaces; j++ ))
+  do
+    echo -n " "
+  done
+
+  for (( j=1; j<=asterisks; j++ ))
+  do
+    echo -n "*"
+  done
+
+  echo ""
+done
+
+for (( i=rows-1; i>=1; i-- ))
+do
+ 
+  spaces=$(( rows - i ))
+  asterisks=$(( i * 2 - 1 ))
+
+  
+  for (( j=1; j<=spaces; j++ ))
+  do
+    echo -n " "
+  done
+
+ 
+  for (( j=1; j<=asterisks; j++ ))
+  do
+    echo -n "*"
+  done
+
+
+  echo ""
+done

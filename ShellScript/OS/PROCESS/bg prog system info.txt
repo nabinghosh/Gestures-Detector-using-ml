@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+int main() {
+    int p = fork();
+
+    if (p<0) 
+    {
+        printf("Error creating child process\n");
+    } 
+    else if (p == 0) {
+        printf("Child process started with PID: %d\n", getpid());
+        sleep(50);
+        system("ps -ax");
+    } 
+
+    return 0;
+}

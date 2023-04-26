@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+int main() 
+{
+    int p1 = fork();
+    if (p1 < 0) 
+    {
+        printf("Error creating first child process\n");
+    } 
+    else if (p1 == 0) 
+    {
+        for(int i=1;i<=10;i++)
+        {
+            printf("child 1 pid: %d  ppid is %d: %d\n",getpid(),getppid(),i);
+        }
+    } 
+    else if (p1 > 0)
+    {
+        int p2 = fork();
+        if (p2 < 0) 
+        {
+            printf("Error creating second child process\n");
+        } 
+        else if (p2 == 0) 
+            {
+                for(int i=1;i<=10;i++)
+                {
+                    printf("child 2 pid: %d  ppid is %d: %d\n",getpid(),getppid(),i);
+                }
+            } 
+        else if (p2 > 0)
+        {
+            wait(NULL);
+            printf("Goodbye\n");
+        }
+    }
+    return 0;
+}

@@ -1,0 +1,16 @@
+if[$# -ne 3]
+then
+    echo wrong number of inputs
+    exit
+fi
+if[! -f "$1"]
+then
+    echo File does not exist
+    exit
+fi
+if[$(wc -l < "$1") -lt $3]
+then
+    echo File does not contain that many lines
+    exit
+fi
+head -$3 $1 | tail -$(($3 - $2))

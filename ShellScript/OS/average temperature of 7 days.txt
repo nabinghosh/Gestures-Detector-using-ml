@@ -1,0 +1,8 @@
+avg=0
+for i in 0 1 2 3 4 5 6
+do
+echo -n "Enter the temperature for day $((i+1)):"
+read temp
+dayavg= $((dayavg + temp))
+done
+echo "Average temperature : $((dayavg/7))"

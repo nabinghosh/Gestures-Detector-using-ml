@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ $# -ne 3 ]; then
+  echo "Error: Invalid number of arguments!"
+  echo "Usage: $0 num1 num2 num3"
+else
+  max=$1
+  if [ $2 -gt $max ]; then
+    max=$2
+  fi
+  if [ $3 -gt $max ]; then
+    max=$3
+  fi
+  echo "The maximum of $1, $2, and $3 is: $max"
+fi

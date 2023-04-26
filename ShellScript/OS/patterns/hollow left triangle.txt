@@ -1,0 +1,41 @@
+# *             
+# * *           
+# *   *         
+# *     *       
+# *       *     
+# *         *   
+# *       *     
+# *     *       
+# *   *         
+# * *           
+# *  
+echo "read row"
+read row
+i=1
+row1=`expr $row \* 2`
+ d=$row 
+while [ $i -lt $row1 ]
+do
+    j=1
+    p=`expr $row + 1`
+
+    while [ $j -le $p ]
+    do
+        if [ $j -eq 1 ] || [ $j -eq $i ] && [ $i -lt $row ]
+        then echo -n "* "
+        elif [ $j -eq 1 ] || [ $j -eq $d ] && [ $i -ge $row ]
+        then 
+            if [ $j -eq $d ]
+            then
+                d=`expr $d - 1`
+            fi
+        echo -n "* "
+        else 
+            echo -n "  "
+        fi
+        j=`expr $j + 1`
+        
+    done
+    echo
+   i=`expr $i + 1`
+done

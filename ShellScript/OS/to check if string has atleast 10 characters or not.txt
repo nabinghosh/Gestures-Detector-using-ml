@@ -1,0 +1,11 @@
+to check if string has atleast 10 characters or not 
+
+echo "Enter string :"
+read string 
+len=`echo -n $string | wc -c`
+if [ $len -lt 10 ]
+then 
+       echo "String is too short "
+else 
+       echo " Okay"
+fi

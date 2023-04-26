@@ -1,0 +1,20 @@
+#* * * * * 
+#* * * * 
+#* * * 
+#* * 
+#*
+echo "read row"
+read row
+i=$row
+
+while [ $i -ge 1 ]
+do
+    j=1
+    while [ $j -le $i ]
+    do
+        j=`expr $j + 1`
+        echo -n "* "
+    done
+    echo ""
+   i=`expr $i - 1`
+done

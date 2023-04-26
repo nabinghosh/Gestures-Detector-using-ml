@@ -1,0 +1,35 @@
+Enter the size of diamond: 7
+*******
+**   **
+* * * *
+*  *  *
+* * * *
+**   **
+*******
+#!/bin/bash
+echo -n "Enter the size of diamond: "
+read size
+half=$((size/2))
+for((i=1;i<=size;i++))
+do
+  for((j=1;j<=size;j++))
+  do
+    if [ $i -eq 1 -o $i -eq $size -o $j -eq 1 -o $j -eq $size ]
+    then
+      echo -n "*"
+    elif [ $i -eq $((half+1)) -a $j -eq $((half+1)) ]
+    then
+      echo -n "*"
+    elif [ $i -lt $((half+1)) -a $((i+j)) -eq $((half+2)) ]
+    then
+      echo -n "*"
+    elif [ $i -gt $((half+1)) -a $((i+j)) -eq $((size+half+1)) ]
+    then
+      echo -n "*"
+    else
+      echo -n " "
+    fi
+  done
+  echo ""
+done
+

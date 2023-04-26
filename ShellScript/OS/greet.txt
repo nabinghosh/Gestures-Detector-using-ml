@@ -1,0 +1,4 @@
+#Write a shell program which displays the message “Welcome” and #prints the date when you log in to your system.
+d=$(date) 
+greet="WELCOME \n $d "
+echo $greet

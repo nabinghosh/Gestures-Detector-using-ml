@@ -1,0 +1,187 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/wait.h>
+#include <sys/time.h>
+#include <signal.h>
+
+void call1(int s)
+{
+    printf("I am awake by signal %d (SIGUSR1)\n",s);
+}
+
+void call2(int s)
+{
+    printf("I am awake by signal %d (SIGUSR2)\n",s);
+}
+
+int main() 
+{
+    int p1,p2;
+    p1=fork();
+    if (p1 < 0) 
+        {
+            printf("Fork 1 Failed\n");
+        } 
+    else if (p1 == 0) 
+        {
+           (void)signal(SIGUSR1,call1);
+           while(1)
+           {
+                sleep(1);
+                printf("I am %d\n",getpid());
+           }
+        }
+    else
+    {   
+        p2=fork();
+    if (p2 < 0) 
+        {
+            printf("Fork 2 Failed\n");
+        } 
+    else if (p2 == 0) 
+        {
+           (void)signal(SIGUSR2,call2);
+           while(1)
+           {
+                sleep(1);
+                printf("I am %d\n",getppid());
+           }
+        }
+    else
+    {   
+        sleep(3);
+        (void)kill(p1,SIGUSR1);
+        sleep(3);
+        (void)kill(p2,SIGUSR2);
+        sleep(2);
+        (void)kill(p1,SIGINT);
+        (void)kill(p2,SIGINT);
+    }
+    }
+    return 0;
+}#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/wait.h>
+#include <sys/time.h>
+#include <signal.h>
+
+void call1(int s)
+{
+    printf("I am awake by signal %d (SIGUSR1)\n",s);
+}
+
+void call2(int s)
+{
+    printf("I am awake by signal %d (SIGUSR2)\n",s);
+}
+
+int main() 
+{
+    int p1,p2;
+    p1=fork();
+    if (p1 < 0) 
+        {
+            printf("Fork 1 Failed\n");
+        } 
+    else if (p1 == 0) 
+        {
+           (void)signal(SIGUSR1,call1);
+           while(1)
+           {
+                sleep(1);
+                printf("I am %d\n",getpid());
+           }
+        }
+    else
+    {   
+        p2=fork();
+    if (p2 < 0) 
+        {
+            printf("Fork 2 Failed\n");
+        } 
+    else if (p2 == 0) 
+        {
+           (void)signal(SIGUSR2,call2);
+           while(1)
+           {
+                sleep(1);
+                printf("I am %d\n",getppid());
+           }
+        }
+    else
+    {   
+        sleep(3);
+        (void)kill(p1,SIGUSR1);
+        sleep(3);
+        (void)kill(p2,SIGUSR2);
+        sleep(2);
+        (void)kill(p1,SIGINT);
+        (void)kill(p2,SIGINT);
+    }
+    }
+    return 0;
+}#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/wait.h>
+#include <sys/time.h>
+#include <signal.h>
+
+void call1(int s)
+{
+    printf("I am awake by signal %d (SIGUSR1)\n",s);
+}
+
+void call2(int s)
+{
+    printf("I am awake by signal %d (SIGUSR2)\n",s);
+}
+
+int main() 
+{
+    int p1,p2;
+    p1=fork();
+    if (p1 < 0) 
+        {
+            printf("Fork 1 Failed\n");
+        } 
+    else if (p1 == 0) 
+        {
+           (void)signal(SIGUSR1,call1);
+           while(1)
+           {
+                sleep(1);
+                printf("I am %d\n",getpid());
+           }
+        }
+    else
+    {   
+        p2=fork();
+    if (p2 < 0) 
+        {
+            printf("Fork 2 Failed\n");
+        } 
+    else if (p2 == 0) 
+        {
+           (void)signal(SIGUSR2,call2);
+           while(1)
+           {
+                sleep(1);
+                printf("I am %d\n",getppid());
+           }
+        }
+    else
+    {   
+        sleep(3);
+        (void)kill(p1,SIGUSR1);
+        sleep(3);
+        (void)kill(p2,SIGUSR2);
+        sleep(2);
+        (void)kill(p1,SIGINT);
+        (void)kill(p2,SIGINT);
+    }
+    }
+    return 0;
+}

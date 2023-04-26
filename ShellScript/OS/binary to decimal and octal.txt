@@ -1,0 +1,13 @@
+# Prompt the user for a decimal number
+echo "Enter a decimal number:"
+read decimal
+
+# Convert the decimal number to binary
+binary=$(echo "obase=2; $decimal" | bc)
+
+# Convert the decimal number to octal
+octal=$(echo "obase=8; $decimal" | bc)
+
+# Display the results
+echo "Binary: $binary"
+echo "Octal: $octal"

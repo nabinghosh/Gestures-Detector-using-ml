@@ -1,0 +1,24 @@
+*
+**
+***
+****
+*****
+
+#!/bin/bash
+
+# Set the number of rows
+rows=5
+
+# Loop through the rows
+for (( i=1; i<=rows; i++ ))
+do
+  # Loop through the columns
+  for (( j=1; j<=i; j++ ))
+  do
+    # Print an asterisk
+    echo -n "*"
+  done
+
+  # Move to the next line
+  echo ""
+done

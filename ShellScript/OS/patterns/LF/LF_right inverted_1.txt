@@ -1,0 +1,21 @@
+echo "Enter the number of rows:"
+read rows
+
+i=$rows
+
+while [ $i -ge 1 ]
+do
+    j=1
+    while [ $j -le $rows ]
+    do
+        if [ $j -lt $i ]
+        then
+            echo -n "  " # print two spaces for every missing asterisk
+        else
+            echo -n "* " # print an asterisk and a space for every remaining position
+        fi
+        j=`expr $j + 1`
+    done
+    echo "" # move to the next line
+    i=`expr $i - 1`
+done

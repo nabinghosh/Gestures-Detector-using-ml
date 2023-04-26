@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <unistd.h>
+
+int global_var = 0;
+
+int main() {
+    int local_var = 0; 
+    int p = fork(); 
+    if (p < 0) 
+    {
+        printf("Error creating child process\n");
+    } 
+    else if (p == 0) 
+    {
+        printf("Child process started with PID: %d\n", getpid());
+        printf("Child process - Local variable: %d, Global variable: %d\n",++local_var,++global_var);
+    } 
+    else if (p > 0) 
+    {
+        printf("Parent process started with PID: %d\n", getpid());
+        printf("Parent process - Local variable: %d, Global variable: %d\n",++local_var,++global_var);
+    }
+
+    return 0;
+}

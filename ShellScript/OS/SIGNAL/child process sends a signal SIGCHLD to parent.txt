@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/wait.h>
+#include <sys/time.h>
+#include <signal.h>
+
+void hdlr(int s)
+{
+    printf("signal %d occured\n",s);
+}
+int main() 
+{
+    int p;
+    p=fork();
+    if (p < 0) 
+        {
+            printf("Fork Failed\n");
+        } 
+    else if (p == 0) 
+        {
+            sleep(3);
+            (void)kill(getppid(),SIGCHLD);
+            sleep(2);
+            printf("child process exits\n");
+        }
+    else
+    {
+        (void)signal(SIGCHLD,hdlr);
+        wait(NULL);
+        printf("Parent Exits\n");
+    }
+    exit(0);
+}

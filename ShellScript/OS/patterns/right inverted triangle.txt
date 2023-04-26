@@ -1,0 +1,21 @@
+echo "Enter the number of rows:"
+read rows
+
+i=$rows
+
+while [ $i -ge 1 ]
+do
+    j=1
+    while [ $j -le $rows ]
+    do
+        if [ $j -lt $i ]
+        then
+            echo -n "  " 
+        else
+            echo -n "* " 
+        fi
+        j=`expr $j + 1`
+    done
+    echo "" 
+    i=`expr $i - 1`
+done

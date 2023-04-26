@@ -1,0 +1,536 @@
+ 1  ls
+    2  clear
+    3  date
+    4  du
+    5  df
+    6  clear
+    7  man
+    8  man ls
+    9  man 3 ls
+   10  man 3 gets
+   11  man gets
+   12  man 7 gets
+   13  man 7 sockret
+   14  man 7 socket
+   15  ~date
+   16  date
+   17  mkdir 2160049
+   18  pwd
+   19  ls
+   20  cd 2160049
+   21  pwd
+   22  cat > xyz
+   23  ls
+   24  touch xyz1
+   25  ls
+   26  ls -l
+   27  cd ..
+   28  ls -l
+   29  cd 2160049
+   30  ls -l
+   31  ls ll
+   32  ll
+   33  chmore
+   34  chmod
+   35  chmod 751 xyz
+   36  ll
+   37  chmod o-x xyz
+   38  ll
+   39  echo $PATH
+   40  cal
+   41  timw
+   42  time
+   43  cat > name.txt
+   44  cat name.txt
+   45  cat >> name.txt
+   46  cat name.txt
+   47  ls -l
+   48  cd
+   49  ls -l
+   50  ls -l >> mop
+   51  ls
+   52  cat mop
+   53  cp name.txt mop
+   54  cd 2160049
+   55  name.txt name1.txt
+   56  cp name.txt name1.txt
+   57  mv name1.txt home/CSBS
+   58  ll
+   59  cd
+   60  cd 2160049
+   61  mv mop home/CSBS/
+   62  2160049
+   63  mv mop home/CSBS/2160049
+   64  mv mop /home/CSBS/2160049
+   65  pwd
+   66  ls
+   67  cd 21600496
+   68  ll
+   69  cd 2160049
+   70  ll
+   71  mv mop /home/CSBS
+   72  ll
+   73  cd
+   74  ll
+   75  cd 2160049
+   76  wc name.txt
+   77  wc
+   78  wc -l name.txt
+   79  cat name.txt
+   80  /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+   81  wc -w name.txt
+   82  wc -c name.txt
+   83  history
+   84  cleaR
+   85  bc 69+3
+   86  bc 69 + 3
+   87  bc
+   88  bc2+3
+   89  echo bc 2+3
+   90  echo 'bc 2+3,
+   91  echo 'bc 2+3'
+   92  echo ~bc 2+3~
+   93  echo `bc 2+3`
+   94  echo (bc 2+3)
+   95  echo *bc 2+3*
+   96  echo bc '2+3'
+   97  echo bc ~2+3~
+   98  echo bc `2+3`
+   99  echo {bc 3+6}
+  100  echo [bc 2+3]
+  101  cd
+  102  cat mop
+  103  cat 5 mop
+  104  cat mop 5
+  105  head 5 mop
+  106  head -5 mop
+  107  tail -5 mop
+  108  centre -5 mop
+  109  mid -5 mop
+  110  -5 mop
+  111  head+tail/2 mop
+  112  history
+  113  head -9 mop
+  114  head -9 mop | tail -5 mop
+  115  head -9 mop | tail -5
+  116  head -9 mop | tail -5 | head -3
+  117  head -9 mop | tail -5 >> pipe
+  118  ls
+  119  cat pipe
+  120  mv pipe /home/CSBS/2160049
+  121  cd 2160049
+  122  head -9 mop | tail -5 >> pipe1 | wc -c pipe1
+  123  cd
+  124  head -9 mop | tail -5 >> pipe1 | wc -c pipe1
+  125  rm
+  126  rm -f
+  127  cd 2160049
+  128  rm\
+  129  rm
+  130  rm -f
+  131  history
+  132  rm history
+  133  shut down
+  134  power off
+  135  poweroff
+  136  cd 2160049
+  137  cd day1
+  138  ls
+  139  echo 2+3 | bc
+  140  a=2
+  141  b=3
+  142  echo $a
+  143  expr $a + $b
+  144  a=2.5 b=2.3
+  145  echo $a + $b
+  146  echo $a + $b | bc
+  147  ps
+  148  ps -el
+  149  ps -el more
+  150  ps -el | more
+  151  history
+  152  sed
+  153  man sed
+  154  ls -el >> abc
+  155  ps -el >> abc
+  156  history
+  157  echo abc
+  158  cat abc
+  159  sed -l 5,10 abc
+  160  sort abc
+  161  If no -e, --expression, -f, or --file option is given, then the first
+  162  non-option argument is taken as the sed script to interpret.  All
+  163  remaining arguments are names of input files; if no input files are; specified, then the standard input is read.;  GNU sed home page: <https://www.gnu.org/software/sed/>.; General help using GNU software: <https://www.gnu.org/gethelp/>.; [CSBS@localhost 2160049]$ ; top;
+  164  top
+  165  kill
+  166  top
+  167  ps
+  168  ps -el
+  169  kill 3198
+  170  ps -el
+  171  kill 3264
+  172  ps -el
+  173  kill 3290
+  174  ps -el
+  175  kill 3310
+  176  ps -el
+  177  kill 3339
+  178  ps -el
+  179  nice top
+  180  re nice
+  181  renice
+  182  renice 5 top
+  183  renice 5 3359
+  184  kill 3359
+  185  renice 5 3367
+  186  kill 3367
+  187  clear
+  188  find abc
+  189  cd
+  190  find abc
+  191  find /  abc
+  192  locate abc
+  193  locate abcjmnuinjhhnu
+  194  HJNu'
+  195  ;Bmunjhm' ;.l/
+  196   Lnhu:>?"Ljk,bhu
+  197  cd 2160049
+  198  ls
+  199  echo hello HIT
+  200  echo hello HIT | tr
+  201  echo hello HIT | tr [a-z] [A-Z]
+  202  grep bash abc
+  203  grep top abc
+  204  grep b*
+  205  grep b* abc
+  206  grep *b abc
+  207  grep ?? abc
+  208  grep ??? abc
+  209  grep $$$ abc
+  210  clear
+  211  hstory
+  212  gedit day1.sh
+  213  gedit p1.sh
+  214  sh p1.sh
+  215  gedit p1.sh
+  216  sh p1.sh
+  217  gedit p1.sh
+  218  shellcheck p1.sh
+  219  gedit p1.sh
+  220  sh p1.sh
+  221  gedit p1.sh
+  222  gedit p2.sh
+  223  sh p1.sh
+  224  history
+  225  sh p1.sh
+  226  clear
+  227  sh p1.sh
+  228  uname
+  229  echo "$x"
+  230  x=uname
+  231  echo "$x"
+  232  echo $x
+  233  `echo $x`
+  234  uname
+  235  echo '$x'
+  236  echo $x
+  237  sh p2.sh
+  238  sh p3.sh
+  239  cd 2160049
+  240  pattern.sh
+  241  gedit pattern.sh
+  242  PATH
+  243  $PATH
+  244  $PATH wish.sh
+  245  pwd
+  246  history
+  247  sh pattern.sh
+  248  clear
+  249  sh pattern.sh
+  250  clear
+  251  echo "hello world"
+  252  echo p="hello world"
+  253  tr -cd [aeiou] p
+  254  tr -cd[aeiou] p
+  255  p=hello world
+  256  p = hello world
+  257  p='hello world'
+  258  echo $p
+  259  tr -cd [aeiou] p
+  260  tr p
+  261  tr --help
+  262  echo $p | tr -cd [aeiou] ec-c
+  263  echo $p | tr -cd [aeiou] wc-c
+  264  echo $p | tr -cd[aeiou]wc-c
+  265  echo $p | tr -cd [aeiou] | wc -c
+  266  sh pattern.sh
+  267  echo `expr 2 \* 2 | bc`
+  268  echo `expr 2 \* "-" | bc`
+  269  echo ` 2 \* "-" | bc`
+  270  sh vowel_consonant.sh
+  271  history
+  272  sh vowel_consonant.sh
+  273  date
+  274  date --help
+  275  clear
+  276  date +h
+  277  date -h
+  278  date +H
+  279  `echo date +h`
+  280  mandate
+  281  man date
+  282  date %h
+  283  `date %h`
+  284  date %H
+  285  `date %H`
+  286  man date
+  287  date +%h
+  288  `date +%h`
+  289  date +%H
+  290  wish.sh
+  291  sh wish.sh
+  292  echo $PATH
+  293  ls -al
+  294  cd
+  295  ls -al
+  296  chmod
+  297  chmod --help
+  298  chmod 777 wish.sh
+  299  cd 2160049
+  300  chmod 777 wish.sh
+  301  ls -al
+  302  cd
+  303  gedit .bashrc
+  304  history
+  305  sed -l 5,10 abc
+  306  cd 2160049
+  307  sed -l 5,10 abc
+  308  locate abc
+  309  cd
+  310  locate abc
+  311  find abc
+  312  locate abc
+  313  locate a
+  314  clear
+  315  cd 2160049
+  316  cd2160049
+  317  cd 2160049
+  318  ls
+  319  ls -el
+  320  history
+  321  gedit .bashrc
+  322  gedit wish.sh
+  323  sh wish.sh
+  324  sh menu.sh
+  325  sh menu.sh 13
+  326  sh menu.sh
+  327  sh menu.sh 13
+  328  sh menu.sh
+  329  sh menu.sh 13
+  330  sh menu.sh 13 qw
+  331  sh menu.sh 13
+  332  cd
+  333  cd 2160049
+  334  cd f1
+  335  gedit file1.sh
+  336  ls
+  337  cd ..
+  338  ls
+  339  cd f2
+  340  ls
+  341  cd 2160049
+  342  sh menu.sh 13
+  343  sh menu.sh f1 wee
+  344  ls
+  345  sh menu.sh f1 wee
+  346  sh dummy.sh f1 wee
+  347  sh dummy.sh f1 f2
+  348  ls
+  349  sh dummy.sh f2 f1
+  350  ls
+  351  sh dummy.sh f2 f1
+  352  cmp txt1 txt2
+  353  cd f1
+  354  cmp txt1 txt2
+  355  cd ..
+  356  cmp txt1 txt2
+  357  sh dummy.sh f2 f1
+  358  ls
+  359  cd f1
+  360  ls
+  361  sh dummy.sh f2 f1
+  362  cd ..
+  363  sh dummy.sh f2 f1
+  364  ls -l txt1
+  365  cd ..
+  366  cd 2160049
+  367  cd f1
+  368  ls -l txt1
+  369  sh dummy.sh f2 f1
+  370  cd ..
+  371  cd f2
+  372  sh dummy.sh f2 f1
+  373  cd ..
+  374  sh dummy.sh f2 f1
+  375  wc-c txt1
+  376  cs f1
+  377  cd f1
+  378  wc-c txt1
+  379  wc -c txt1
+  380  wc -c txt2
+  381  pwd
+  382  history
+  383  man sed
+  384  whoami sed
+  385  whoami --help
+  386  man --help
+  387  --help
+  388  help
+  389  users
+  390  c..
+  391  cd ..
+  392  users
+  393  cd ..
+  394  users
+  395  ls
+  396  cd  ..
+  397  ls
+  398  cd home
+  399  ls
+  400  count ls
+  401  count -w
+  402  count -w ls
+  403  count --help
+  404  history
+  405  wc ls
+  406  ls
+  407  wc
+  408  wc --help
+  409  wc -w
+  410  who
+  411  who -q
+  412  who wc-2
+  413  who wc -2
+  414  who wc -l
+  415  who wc-l
+  416  who||wc-l
+  417  who|wc-l
+  418  who | wc-l
+  419  who | wc -l
+  420  gedit userno.sh
+  421  cd 2160049
+  422  cd ..
+  423  cd 2160049
+  424  gedit userno.sh
+  425  sh userno.sh
+  426  gedit blankcheck.sh
+  427  cat f1
+  428  gedit a1.sh
+  429  wc -l a1
+  430  wc -l a1.sh
+  431  a1.sh | wc -l
+  432  history
+  433  wc-l a1
+  434  wc -l a1.sh
+  435  wc -l a1
+  436  gedit a1.sh
+  437  wc -l a1.sh
+  438  sh blankcheck.sh a1.sh
+  439  sh blankcheck.sh a1
+  440  ls
+  441  sh blankcheck.sh a1.sh
+  442  history
+  443  cat xyz
+  444  cat dll
+  445  cat dll>>xyz
+  446  cat xyz
+  447  cat dll >> xyz
+  448  cat xyz
+  449  cat --help
+  450  cat dll - kj >> xyz
+  451  cat dll - kj>>xyz
+  452  cat dll -  kj
+  453  sh concatenation,sh dll kj xyz
+  454  sh concatenation.sh dll kj xyz
+  455  cat /etc/passwd
+  456  cat /etc/passwd>>xyz1
+  457  sh concatenation.sh dll kj xyz
+  458  ls
+  459  sh concatenation.sh dll kj xyz1
+  460  sh concatenation.sh dll kj xyz
+  461  netsh
+  462  cd 2160049
+  463  ls -l
+  464  gedit menu.sh
+  465  clear
+  466  cd 2160049
+  467  gedit menu.sh
+  468  gedit pass
+  469  ls -l
+  470  sort
+  471  ls -l | tr -s ' '
+  472  ls -l | tr -s ' ' | cut ' ' -f 8
+  473  ls -l | tr -s ' ' | cut -d ' ' -f 8
+  474  ls -l | tr -s ' ' | cut -d ' ' -f 7
+  475  ls -l | tr -s ' ' | cut -d ' ' -f 6,7
+  476  ls -l | tr -s ' ' | cut -d ' ' -f 3
+  477  ls -l | tr -s ' ' | cut -d ' ' -f 4
+  478  ls -l | tr -s ' ' | cut -d ' ' -f 5
+  479  ls -l | tr -s ' ' | cut -d ' ' -f 4
+  480  ls -l | tr -s ' ' | cut -d ' ' -f 2
+  481  ls -l | tr -s ' ' | cut -d ' ' -f 9
+  482  sort --help
+  483  grep --help
+  484  ls -l | tr -s ' ' | cut -d ' ' -f 5
+  485  history
+  486  sh menu.sh
+  487  ls -l
+  488  sh menu.sh
+  489  history
+  490  cd 2160049
+  491  gedit printline.sh
+  492  sh printline.sh
+  493  sh printline.sh kj
+  494  echo kj
+  495  cat kj
+  496  sh printline.sh kj
+  497  sh printline.sh kj 5 9
+  498  head -5 | tail -9 kj
+  499  sh printline.sh kj 5 9
+  500  wc -l kj
+  501  wc -l kj | cut -d ' ' -f 1
+  502  sh printline.sh kj 5 9
+  503  history
+  504  sh printline.sh kj 5 9
+  505  head -5 | tail -9 kj
+  506  sh printline.sh kj 5 9
+  507  head -5 | tail -9 kj
+  508  head -5 kj| tail -9
+  509  wc -l kj | cut -d ' ' -f 1
+  510  sh printline.sh kj 5 9
+  511  wc kj
+  512  sh printline.sh kj 5 9
+  513  wc -l $1 | cut -d ' ' -f 1
+  514  wc -l kj | cut -d ' ' -f 1
+  515  sh printline.sh kj 5 9
+  516  wc -l kj | cut -d ' ' -f 1
+  517  sh printline.sh kj 5 9
+  518  sh printline.sh a1  5 9
+  519  sh printline.sh kj 5 9
+  520  sh worddel.sh
+  521  sh worddel.sh kj dll
+  522  sh worddel.sh kj1 dll
+  523  sh patterncheck.sh
+  524  chmod
+  525  history
+  526  ls -l
+  527  sh patterncheck.sh 2 3
+  528  sh patterncheck.sh avv 3
+  529  sh patterncheck.sh kj1 2
+  530  sh patterncheck.sh 2160049 new
+  531  sh patterncheck.sh 2160049 -rwxrwxrwx
+  532  sh patterncheck.sh 2160049 "-rwxrwxrwx"
+  533  cd 2160049
+  534  history
+  535  ls
+  536  history >> history.txt

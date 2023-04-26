@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+//#include <sys/wait.h>
+#include <sys/time.h>
+#include <signal.h>
+
+void call(int s)
+{
+    printf("signal %d occured\n",s);
+    (void)signal(SIGINT,SIG_DFL);
+}
+int main() 
+{
+    (void)signal(SIGINT,call);
+    while(1)
+    {
+        printf("Process running\n");
+        sleep(1);
+    }
+    exit(0);
+}

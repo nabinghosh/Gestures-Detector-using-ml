@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <unistd.h>
+#include <sys/time.h>
+#include <sys/wait.h>.
+#include <signal.h>
+
+void hdlr1(int s)
+{
+    printf("parent tries to terminate child process\n");
+    (void)signal(SIGINT,SIG_DFL);
+    sleep(2);
+    (void)kill(getpid(),SIGINT);
+}
+
+void hdlr2(int s)
+{
+    printf("child process terminated\n");
+}
+int main() 
+{
+    int p;
+    p=fork();
+    if (p < 0) 
+        {
+            printf("Fork Failed\n");
+        } 
+    else if (p == 0) 
+        {
+           (void)signal(SIGINT,hdlr1);
+           while(1)
+           {
+                sleep(1);
+                printf("I am %d\n",getpid());
+           }
+        }
+    else
+    {   
+        (void)signal(SIGCHLD,hdlr2);
+        sleep(3);
+        printf("Parent process id is: %d and child process id is: %d\n",getpid(),p);
+        if(p%2==0)
+        (void)kill(p,SIGINT);
+    sleep(5);
+    printf("Parent process exits\n");
+    }
+exit(0);
+}

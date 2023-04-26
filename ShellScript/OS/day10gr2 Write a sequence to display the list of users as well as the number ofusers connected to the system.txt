@@ -1,0 +1,67 @@
+#Day 10 1. Write a shell script which reports names and sizes of all file in a
+directory (directory should be supplied as an argument to the shell script), which
+size exceeds 500 bytes. The file names should be printed in descending order of
+their sizes. The total no. of such files should also be reported.
+2. Write a shell script which displays a list of all files in the current directory to
+which you have rwx permissions.
+3. Write a shell script that accepts file name as argument and display the last
+modification time, if the file exists and a suitable message or don’t exist,
+displays a suitable message.
+4. Write a shell script which finds out the following : a) the last modification time of
+a file, b) whether the command line input string is valid user or not. 5. Write a
+shell script to display the files created or updated 14days before from the current
+date.
+6. Develop a shell script which displays all files with all attributes those have
+created or modified in the month of November
+
+
+
+1. 
+read -p "Enter path: " -r filep
+echo "File path - size"
+for i in $ ( find "$filep" -depth )
+do
+	size = $ ( stat -c %s "i" )
+	if [ $size -gt 500 ]
+	then
+		echo $i "-" $size
+	fi
+done
+
+2.
+echo "The names of all files and directories having all permisions are:"
+ls -l|grep ^[-cbd]]rwx
+
+or 
+
+echo "The names of all files and directories having all permisions are:"
+for file in *
+if [ -f $file ]
+then
+	if [ -r $file -a -w $file -a -x $file ]
+	then 
+		ls -l $file
+	fi
+fi
+done
+
+3. 
+echo -n "Enter name of the file: "
+read name
+if [ -f $name ]
+then echo -n "The file exists"
+	echo "Last Modicfication Time of $name is: " `ls -lt $name|tr -s "" ","|cut -d "," -f8`
+else
+	echo "File does not exist"
+fi
+
+5. 
+find. -type f -mtime -14 -print 
+
+or 
+
+find. -type f -mtime -14 -ls
+
+6. 
+echo "Files created or modified in November: "
+ls -lt|ete|l grep 'Nov'

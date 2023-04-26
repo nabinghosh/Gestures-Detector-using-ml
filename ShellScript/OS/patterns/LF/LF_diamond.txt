@@ -1,0 +1,48 @@
+diamond
+rows=4
+
+# Loop through the top half of the diamond
+for (( i=1; i<=rows; i++ ))
+do
+  # Calculate the number of spaces and asterisks to print
+  spaces=$(( rows - i ))
+  asterisks=$(( i * 2 - 1 ))
+
+  # Print the spaces
+  for (( j=1; j<=spaces; j++ ))
+  do
+    echo -n " "
+  done
+
+  # Print the asterisks
+  for (( j=1; j<=asterisks; j++ ))
+  do
+    echo -n "*"
+  done
+
+  # Move to the next line
+  echo ""
+done
+
+# Loop through the bottom half of the diamond
+for (( i=rows-1; i>=1; i-- ))
+do
+  # Calculate the number of spaces and asterisks to print
+  spaces=$(( rows - i ))
+  asterisks=$(( i * 2 - 1 ))
+
+  # Print the spaces
+  for (( j=1; j<=spaces; j++ ))
+  do
+    echo -n " "
+  done
+
+  # Print the asterisks
+  for (( j=1; j<=asterisks; j++ ))
+  do
+    echo -n "*"
+  done
+
+  # Move to the next line
+  echo ""
+done

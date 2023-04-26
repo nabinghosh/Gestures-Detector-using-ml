@@ -1,0 +1,7 @@
+count number of vowels and consonants in a given sentence 
+read l
+vow=`echo $l | tr [A-Z] [a-z] | tr -cd [a, e, i, o, u] | wc -c`
+con=`echo $l | tr -d [a, e, i, o, u] | tr -cd [a-z] | wc -c`
+
+echo "vowels =$vow "
+echo "consonants  = $con "
