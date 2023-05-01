@@ -1,3 +1,0 @@
-#Write a shell script to print last 20 commands issued by the user. #Then username is supplied as a command line argument to the script
-cd 
-tail -20 .bash_history
